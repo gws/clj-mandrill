@@ -1,0 +1,17 @@
+(ns gws.mandrill.api.ips
+  (:refer-clojure :exclude [list])
+  (:require [gws.mandrill.api :refer [defapi]]))
+
+(defapi list)
+(defapi info)
+(defapi provision)
+(defapi start-warmup)
+(defapi cancel-warmup)
+(defapi set-pool)
+(defapi delete)
+(defapi list-pools)
+(defapi pool-info)
+(defapi create-pool)
+(defapi delete-pool)
+(defapi check-custom-dns)
+(defapi set-custom-dns)

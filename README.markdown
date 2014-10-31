@@ -1,24 +1,25 @@
-# mandrill
+# clj-mandrill
 
 A Clojure library for consuming the
 [Mandrill](https://mandrillapp.com) API.
 
-## Usage
-
-Available on [Clojars](http://clojars.org/gws/mandrill).
+Available on [Clojars](http://clojars.org/gws/clj-mandrill).
 
 ```clojure
-[gws/mandrill "0.1.0"]
+[gws/clj-mandrill "0.2.0"]
 ```
+
+## Usage
 
 ```clojure
 (ns your.app
-  (:require [gws.mandrill.client :as client]))
+  (:require [gws.mandrill.client :as client]
+            [gws.mandrill.api.messages :as messages]))
 
 ; Create a default Mandrill client with your API key. You can also specify a map
 ; of clj-http parameters, but that's optional.
-(def mandrill (client/create "YOUR-SECRET-KEY"))
-;(def mandrill (client/create "YOUR-SECRET-KEY" {:socket-timeout 1000}))
+(def client (client/create "YOUR-SECRET-KEY"))
+;(def client (client/create "YOUR-SECRET-KEY" {:socket-timeout 1000}))
 
 ; Build up an interesting message to send.
 (def msg {:message {:to [{:email "nobody@example.com"
@@ -34,14 +35,17 @@ Available on [Clojars](http://clojars.org/gws/mandrill).
 ; Send the message using the configured Mandrill client.
 ; Functions are named in an attempt to be consistent with the Mandrill REST API
 ; endpoints.
-(client/messages-send mandrill msg)
+(messages/send client msg)
 ```
 
 ## Features
 
-Currently only the
-[messages](https://mandrillapp.com/api/docs/messages.JSON.html) calls are
-implemented.
+The entire [Mandrill API version 1.0](https://mandrillapp.com/api/docs/) is supported.
+
+The API follows the Mandrill API conventions as closely as possible. In other
+words, messages calls are in the `gws.mandrill.api.messages` namespace, and the
+calls are lowercased functions in that namespace, such as
+`gws.mandrill.api.messages/send`.
 
 ## Testing
 
@@ -59,4 +63,4 @@ MANDRILL_TEST_API_KEY=YOURTESTKEY lein test
 
 Copyright © 2014 Gordon Stratton
 
-Distributed under the [ISC License](http://opensource.org/licenses/ISC)
+Licensed under the [Apache License version 2.0](https://www.apache.org/licenses/LICENSE-2.0).

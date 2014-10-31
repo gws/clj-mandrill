@@ -1,0 +1,15 @@
+(ns gws.mandrill.api.messages
+  (:refer-clojure :exclude [send])
+  (:require [gws.mandrill.api :refer [defapi]]))
+
+(defapi send)
+(defapi send-template)
+(defapi search)
+(defapi search-time-series)
+(defapi info)
+(defapi content)
+(defapi parse)
+(defapi send-raw)
+(defapi list-scheduled)
+(defapi cancel-scheduled)
+(defapi reschedule)
