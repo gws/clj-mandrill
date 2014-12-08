@@ -3,11 +3,9 @@
 A Clojure library for consuming the
 [Mandrill](https://mandrillapp.com) API.
 
-Available on [Clojars](http://clojars.org/gws/clj-mandrill).
+## Installation
 
-```clojure
-[gws/clj-mandrill "0.2.0"]
-```
+[![Clojars Project](https://clojars.org/gws/clj-mandrill/latest-version.svg)](https://clojars.org/gws/clj-mandrill)
 
 ## Usage
 
