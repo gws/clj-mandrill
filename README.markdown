@@ -13,6 +13,10 @@ A Clojure library for consuming the
 
 [![Clojars Project](https://clojars.org/gws/clj-mandrill/latest-version.svg)](https://clojars.org/gws/clj-mandrill)
 
+## Documentation
+
+[API documentation](https://gws.github.io/clj-mandrill/)
+
 ## Usage
 
 ```clojure
