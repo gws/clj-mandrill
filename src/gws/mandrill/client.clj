@@ -1,6 +1,6 @@
 (ns gws.mandrill.client
-  (:require [clj-http.client :as http]
-            [clojure.data.json :as json]))
+  (:require [cheshire.core :as json]
+            [clj-http.client :as http]))
 
 (defrecord MandrillClient [api-key clj-http-options])
 
@@ -14,7 +14,7 @@
         params (merge {:as :json
                        :content-type :json
                        :headers {"User-Agent" user-agent}
-                       :body (json/write-str body)}
+                       :body (json/generate-string body)}
                       (:clj-http-options client))]
     (:body (http/post (format endpoint-fmt endpoint) params))))
 

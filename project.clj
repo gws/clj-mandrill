@@ -6,8 +6,8 @@
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
   :profiles {:test {:global-vars {*warn-on-reflection* true}
                     :plugins [[jonase/eastwood "0.2.1"]]}}
-  :dependencies [[clj-http "1.0.1"]
-                 [org.clojure/clojure "1.6.0"]
-                 [org.clojure/data.json "0.2.5"]]
+  :dependencies [[cheshire "5.4.0"]
+                 [clj-http "1.0.1"]
+                 [org.clojure/clojure "1.6.0"]]
   :test-selectors {:default (fn [m] (not (:integration m)))
                    :integration :integration})
