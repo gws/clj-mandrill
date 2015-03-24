@@ -7,7 +7,7 @@
   :profiles {:test {:global-vars {*warn-on-reflection* true}
                     :plugins [[jonase/eastwood "0.2.1"]]}}
   :dependencies [[cheshire "5.4.0"]
-                 [clj-http "1.0.1"]
+                 [clj-http "1.1.0"]
                  [org.clojure/clojure "1.6.0"]]
   :test-selectors {:default (fn [m] (not (:integration m)))
                    :integration :integration})
