@@ -4,10 +4,10 @@
   :min-lein-version "2.0.0"
   :license {:name "Apache 2.0"
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
-  :profiles {:test {:global-vars {*warn-on-reflection* true}
-                    :plugins [[jonase/eastwood "0.2.1"]]}}
   :dependencies [[cheshire "5.4.0"]
-                 [clj-http "1.1.0"]
-                 [org.clojure/clojure "1.6.0"]]
-  :test-selectors {:default (fn [m] (not (:integration m)))
+                 [clj-http "1.1.0"]]
+  :global-vars {*warn-on-reflection* true}
+  :profiles {:dev {:dependencies [[org.clojure/clojure "1.6.0"]]}
+             :test {:plugins [[jonase/eastwood "0.2.1"]]}}
+  :test-selectors {:default (complement :integration)
                    :integration :integration})
