@@ -5,7 +5,7 @@
   :license {:name "Apache 2.0"
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [[cheshire "5.4.0"]
-                 [clj-http "1.1.0"]]
+                 [clj-http "1.1.2"]]
   :global-vars {*warn-on-reflection* true}
   :plugins [[codox "0.8.10"]]
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.6.0"]]
