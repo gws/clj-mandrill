@@ -1,5 +1,5 @@
 (ns gws.mandrill.api.templates
-  (:refer-clojure :exclude [list])
+  (:refer-clojure :exclude [list update])
   (:require [gws.mandrill.api :refer [defapi]]))
 
 (defapi add)
