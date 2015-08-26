@@ -19,7 +19,9 @@
     (:body (http/post (format endpoint-fmt endpoint) params))))
 
 (defn create
-  "Build a Mandrill client, containing an optional map of parameters which,
-   if specified, will be merged into the clj-http parameter map."
-  [api-key & [clj-http-options]]
-  (->MandrillClient api-key (or clj-http-options {})))
+  "Build a Mandrill client. An optional map of parameters may be passed which
+  will be merged with the clj-http parameter map."
+  ([api-key]
+   (create api-key {}))
+  ([api-key clj-http-options]
+   (->MandrillClient api-key clj-http-options)))
