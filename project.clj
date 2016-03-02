@@ -7,7 +7,7 @@
   :dependencies [[cheshire "5.5.0"]
                  [clj-http "2.1.0"]]
   :global-vars {*warn-on-reflection* true}
-  :plugins [[codox "0.9.4"]]
+  :plugins [[lein-codox "0.9.4"]]
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.8.0"]]
                    :plugins [[jonase/eastwood "0.2.3"]]}}
   :test-selectors {:default (complement :integration)
