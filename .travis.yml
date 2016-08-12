@@ -3,5 +3,5 @@ lein: lein2
 env:
   - MANDRILL_TEST_API_KEY=not-a-real-key
 script:
-  - lein2 with-profile test eastwood
+  - lein2 eastwood
   - lein2 test
