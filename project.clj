@@ -4,8 +4,8 @@
   :min-lein-version "2.0.0"
   :license {:name "Apache 2.0"
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
-  :dependencies [[cheshire "5.7.0"]
-                 [clj-http "3.4.1"]]
+  :dependencies [[cheshire "5.7.1"]
+                 [clj-http "3.5.0"]]
   :profiles {:dev {:plugins [[jonase/eastwood "0.2.3"]
                              [lein-codox "0.9.4"]]
                    :global-vars {*warn-on-reflection* true}}
