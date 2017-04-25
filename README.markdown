@@ -1,10 +1,7 @@
-[![Status of clj-mandrill build (master branch).](https://travis-ci.org/gws/clj-mandrill.svg?branch=master)]
-(https://travis-ci.org/gws/clj-mandrill)
-
-[![Status of clj-mandrill dependencies.](https://jarkeeper.com/gws/clj-mandrill/status.svg)]
-(https://jarkeeper.com/gws/clj-mandrill)
-
 # clj-mandrill
+
+[![Status of clj-mandrill build (master branch).](https://travis-ci.org/gws/clj-mandrill.svg?branch=master)](https://travis-ci.org/gws/clj-mandrill)
+[![Status of clj-mandrill dependencies.](https://jarkeeper.com/gws/clj-mandrill/status.svg)](https://jarkeeper.com/gws/clj-mandrill)
 
 A Clojure library for consuming the
 [Mandrill](https://mandrillapp.com) API.
