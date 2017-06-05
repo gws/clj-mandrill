@@ -5,7 +5,7 @@
 (defrecord MandrillClient [api-key clj-http-options])
 
 (def endpoint-fmt "https://mandrillapp.com/api/1.0/%s.json")
-(def user-agent "clj-mandrill/0.4.8 (https://github.com/gws/clj-mandrill)")
+(def user-agent "clj-mandrill/0.4.9 (https://github.com/gws/clj-mandrill)")
 
 (defn call
   "Calls the supplied Mandrill endpoint and returns the decoded response body."

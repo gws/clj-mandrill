@@ -1,4 +1,4 @@
-(defproject gws/clj-mandrill "0.4.8"
+(defproject gws/clj-mandrill "0.4.9"
   :description "A Clojure implementation of the Mandrill API"
   :url "https://gitlab.com/gws/clj-mandrill"
   :min-lein-version "2.0.0"
